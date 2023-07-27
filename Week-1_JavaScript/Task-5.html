@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-5</title>
+</head>
+
+<body>
+    <h1>My Favorite Books</h1>
+  <ul id="book-list"></ul>
+
+    <script>
+        // Array of favorite books
+    const favoriteBooks = [
+      "Transcendence",
+      "1984",
+      "Pride and Prejudice",
+      "The Lord of the Rings",
+      "Harry Potter and the Sorcerer's Stone",
+    ];
+    
+    // Function to display book titles in HTML
+    function displayBooks(bookArray) {
+      const bookList = document.getElementById("book-list");
+    
+      // Clear any existing content
+      bookList.innerHTML = "";
+    
+      // Iterate over the book array and create list items
+      bookArray.forEach(function (book) {
+        const listItem = document.createElement("li");
+        listItem.textContent = book;
+        bookList.appendChild(listItem);
+      });
+    }
+    
+    // Call the function with the array of favorite books
+    displayBooks(favoriteBooks);
+    
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

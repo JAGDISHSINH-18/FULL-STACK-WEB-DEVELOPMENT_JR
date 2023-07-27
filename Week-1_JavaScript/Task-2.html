@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function t2(){
+        var num1 =  parseFloat(document.getElementById("num1").value);
+        var num2 =  parseFloat(document.getElementById("num2").value);
+
+        var sum = num1 +num2;
+        var difference = num1-num2;
+        var product = num1 * num2;
+        var quotient = num1/num2;
+
+        document.getElementById("sum").innerHTML="Sum: "+sum;
+        document.getElementById("difference").innerHTML="Difference: "+difference;
+        document.getElementById("product").innerHTML="Product: "+product;
+        document.getElementById("quotient").innerHTML="Quotient: "+quotient;
+    }
+</script>
+<body>
+    <h3>Task-2</h3>
+    <label for="num1">Number1:</label>
+    <input type="text" id="num1"><br><br>
+    <label for="num2">Number2:</label>
+    <input type="text" id="num2"><br><br>
+    <button onclick="t2()">Calculate</button><br><br>
+    <div id="sum"></div>
+    <div id="difference"></div>
+    <div id="product"></div>
+    <div id="quotient"></div>
+</body>
+</html>

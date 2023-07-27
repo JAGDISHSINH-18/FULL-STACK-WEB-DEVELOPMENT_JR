@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Asynchronous Operation</title>
+  <script>
+    function simulateAsyncOperation(callback) {
+      setTimeout(function() {
+        var result = 'Asynchronous operation completed';
+        callback(result);
+      }, 2000); // Simulating a delay of 2000 milliseconds (2 seconds)
+    }
+
+    function handleResult(result) {
+      var resultContainer = document.getElementById('resultContainer');
+      resultContainer.innerHTML = 'Result: ' + result;
+    }
+
+    function performAsyncOperation() {
+      var resultContainer = document.getElementById('resultContainer');
+      resultContainer.innerHTML = 'Performing asynchronous operation...';
+
+      simulateAsyncOperation(handleResult);
+    }
+  </script>
+</head>
+<body>
+  <h1>Asynchronous Operation</h1>
+  <button onclick="performAsyncOperation()">Start Asynchronous Operation</button>
+  <div id="resultContainer"></div>
+</body>
+</html>

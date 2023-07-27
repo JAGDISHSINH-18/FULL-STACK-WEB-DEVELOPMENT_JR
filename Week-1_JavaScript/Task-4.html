@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function CalculateSalaries()
+    {
+        var salary1 =  parseFloat(document.getElementById('salary1').value);
+        var salary2 =  parseFloat(document.getElementById('salary2').value);
+        var salary3 =  parseFloat(document.getElementById('salary3').value);
+        var salary4 =  parseFloat(document.getElementById('salary4').value);
+        var salary5 =  parseFloat(document.getElementById('salary5').value);
+    
+
+    var SalaryArray=[salary1, salary2, salary3, salary4, salary5];
+
+    var maxSalary = Math.max.apply(null,SalaryArray);
+    var minSalary = Math.min.apply(null,SalaryArray);
+
+    document.getElementById('maxSalary').innerHTML = "Maximum Salary: " + maxSalary;
+    document.getElementById('minSalary').innerHTML = "Minimum Salary: " + minSalary;
+
+    }
+</script>
+<body>
+    <form>
+        <label for="salary1">Salary 1:</label>
+        <input type="number" id="salary1" /><br>
+
+        <label for="salary2">Salary 2:</label>
+        <input type="number" id="salary2" /><br>
+
+        <label for="salary3">Salary 3:</label>
+        <input type="number" id="salary3" /><br>
+
+        <label for="salary4">Salary 4:</label>
+        <input type="number" id="salary4" /><br>
+
+        <label for="salary5">Salary 5:</label>
+        <input type="number" id="salary5" /><br><br>
+
+        <button type="button" onclick="CalculateSalaries()">Submit</button><br>
+    </form>
+
+    <div id="maxSalary"></div><br>
+    <div id="minSalary"></div>
+    
+</body>
+</html>

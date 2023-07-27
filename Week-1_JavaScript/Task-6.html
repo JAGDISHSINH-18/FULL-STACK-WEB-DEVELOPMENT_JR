@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Variable Scope</title>
+  <script>
+    function testScope() {
+      var varVariable = 'Var Variable';
+      let letVariable = 'Let Variable';
+      const constVariable = 'Const Variable';
+
+      console.log('Inside Function:');
+      console.log(varVariable);   // Accessible
+      console.log(letVariable);   // Accessible
+      console.log(constVariable); // Accessible
+
+      // Trying to modify the values
+      varVariable = 'Modified Var Variable';
+      letVariable = 'Modified Let Variable';
+      // constVariable = 'Modified Const Variable'; // This will throw an error
+
+      console.log('Inside Function (after modification):');
+      console.log(varVariable);
+      console.log(letVariable);
+      console.log(constVariable);
+    }
+
+    testScope();
+
+    console.log('Outside Function:');
+    console.log(varVariable);   // varVariable is undefined
+    console.log(letVariable);   // letVariable is not defined
+    console.log(constVariable); // constVariable is not defined
+  </script>
+</head>
+<body>
+</body>
+</html>
